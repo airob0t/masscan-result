@@ -21,8 +21,8 @@ def parseinfo(filename):
                         print "Host: " + hosts.next().attrib['addr']
                         print "Port: " + ports.next().attrib['portid']
                         print "Banner: " + banners.next().attrib['banner']
-                except StopIteration:
-                        pass
+                except StopIteration: #Just means end of file has been reached
+                        print "EOF"
 
 
 def main():
